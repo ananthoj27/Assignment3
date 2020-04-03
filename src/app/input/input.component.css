@@ -1,18 +1,19 @@
 section{
   padding: 1em;
-  background: cornsilk;
+  background: seagreen;
 }
 
 h1{
-  color:dodgerblue;
+  color: ghostwhite;
+  font-style: italic;
 }
 
 h2{
-  color: forestgreen;
+  color: ghostwhite;
 }
 
 label.input-label{
-  color: cornflowerblue;
+  color: ghostwhite;
   font-weight: bolder;
 }
 
