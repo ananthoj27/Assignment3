@@ -3,11 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {FooterComponent} from './footer/footer.component';
-import {RouterTestingModule} from '@angular/router/testing';
-import {InputComponent} from './input/input.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import {RouterModule, Routes} from '@angular/router';
+import {InputComponent} from './input/input.component';
 import {OutputComponent} from './output/output.component';
 import {CatDataService} from './cat-data.service';
+
+const routes: Routes = [
+  {path: 'input', component: InputComponent},
+  {path: 'output', component: OutputComponent},
+  {path: '', redirectTo: 'input', pathMatch: 'full'},
+  {path: '**', redirectTo: 'input'}
+];
 
 @NgModule({
     declarations: [
@@ -18,8 +25,8 @@ import {CatDataService} from './cat-data.service';
     ],
   imports: [
     BrowserModule,
-    RouterTestingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [CatDataService],
   bootstrap: [AppComponent]

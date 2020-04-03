@@ -1,10 +1,12 @@
 export class Cat {
   public catName: string;
-  public catGender: number;
-  public catVaccination: boolean;
+  public catGender: string;
+  public vacYes: boolean;
+  public vacNo: boolean;
   public constructor() {
     this.catName = '';
-    this.catGender = 0;
-    this.catVaccination = false;
+    this.catGender = '';
+    this.vacYes = false;
+    this.vacNo = false;
   }
 }
