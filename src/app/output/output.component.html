@@ -1,0 +1,22 @@
+<section>
+  <h1>{{title}}</h1>
+  <h2>Cat Details:</h2>
+  <p>
+    <label class="output-label">Cat Name:</label>
+    <span class="output-value">{{cat.catName}}</span>
+  </p>
+
+  <p>
+    <label class="output-label">Gender:</label>
+    <span class="output-value">
+      {{(cat.catGender)?cat.catGender:""}}
+    </span>
+  </p>
+  <p>
+    <label class="output-label">Vaccinated:</label>
+    <span class="output-value">{{(cat.vac)?cat.vac:""}}</span>
+  </p>
+  <p>
+    <a routerLink="input">Back to Input</a>
+  </p>
+</section>

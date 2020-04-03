@@ -1,0 +1,36 @@
+<section>
+  <h1>{{title}}</h1>
+  <form [formGroup]="form" (ngSubmit)="send(form.value)">
+    <h2>Cat Details:</h2>
+    <p>
+      <label for="first" class="input-label">Cat Name:</label><br/>
+      <input id="first" type="text" formControlName="catName" name="catName">
+      <span *ngIf="form.get('catName').hasError('required')"
+            class="validation-message">
+        <br/>Cat name is required
+      </span>
+    </p>
+
+    <p>
+      <label class="input-label">Gender:</label><br/>
+      <label><input type="radio" value="Male" class="radio-label"
+                    formControlName="catGender" name="catGender">Male</label>
+      <label><input name="catGender" type="radio" value="Female" class="radio-label"
+                    formControlName="catGender">Female</label>
+      <span *ngIf="form.get('catGender').hasError('catGender')"
+            class="validation-message">
+        <br/>Select the Gender
+      </span>
+    </p>
+    <p>
+      <label class="input-label">Vaccinated:</label><br/>
+      <label><input type="checkbox" value="yes" class="checkbox-label"
+                    formControlName="vac" name="vac">YES</label>&nbsp;
+      <label><input type="checkbox" value="yes" class="checkbox-label"
+                    formControlName="vac" name="vac">NO</label>
+    </p>
+    <p>
+      <button type="submit" [disabled]="!form.valid">Send</button>
+    </p>
+  </form>
+</section>
