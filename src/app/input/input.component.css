@@ -21,3 +21,8 @@ span.validation-message{
   color: coral;
   font-style: oblique;
 }
+
+img{
+   height: 250px;
+   width: 800px;
+}
